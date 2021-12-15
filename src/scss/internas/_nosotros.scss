@@ -1,0 +1,13 @@
+.nosotros {
+    @include tablet {
+        @include grid(3,2rem);
+    }
+    h3 {
+        color: $azulFuerte;
+        font-weight: 400;
+        font-size: 2.5rem;
+    }
+    p {
+        text-align: justify;
+    }
+}

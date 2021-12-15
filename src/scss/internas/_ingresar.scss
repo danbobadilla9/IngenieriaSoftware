@@ -1,0 +1,167 @@
+.fondo {
+    background-image: url(../img/login.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login {
+    width: 25rem;
+    height: 35rem;
+     //Cambiar a auto en espera
+    margin: 15rem 0;
+    @include telefono {
+        width: 30rem;
+        height: 30rem;
+    }
+    @include tablet {
+        width: 35rem;
+        height: 35rem ;
+        left: 50rem;
+        position: absolute;
+    }
+
+    box-shadow: 0px 0px 28px 9px rgba(102,102,102,0.6);
+    -webkit-box-shadow: 0px 0px 28px 9px rgba(102,102,102,0.6);
+    -moz-box-shadow: 0px 0px 28px 9px rgba(102,102,102,0.6);
+
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    background: rgba(155, 154, 154, 0.418);
+    h1 {
+        color: $gris;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+}
+.form--login,.form--login2,.form--login3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .input {
+        &::placeholder {
+            color: $blanco;
+        }
+        background-color: rgba(155, 154, 154, 0.418);
+        border: 1px solid $gris;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    button {
+        display: block;
+        color: $blanco;
+        font-weight: 400;
+        margin-top: 1rem;
+        background-color: rgba(155, 154, 154, 0.521);
+        width: 19rem;
+        padding: 1rem;
+        border: 1px solid $gris;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 28px 2px rgba(102,102,102,0.6);
+        &:hover {
+            background-color: rgba(155, 154, 154, 0.911);
+        }
+    }
+
+}
+.form--login2{
+    margin: 3rem 0;
+    .cancelar {
+        margin-top: 1rem;
+    }
+}
+.form--login3{
+    margin: 0 0 3rem 0;
+    justify-content: flex-start;
+    
+    .cancelar2 {
+        margin-top: 1rem;
+    }
+    @include tablet{
+        .input {
+            width: 15rem;
+            margin-left: 1rem;
+            &:last-child{
+                margin-left: 0;
+            }
+        }
+    }
+
+
+}
+.enlace--form{
+    color: $blanco;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    margin-bottom: -0.5rem;
+    &:hover {
+        color: $azulClaro;
+        cursor: pointer;
+    }
+}
+.ocultar {
+    display: none;
+}
+.mostrar {
+    display: flex;
+
+}
+.aumentar {
+        height: 60rem !important;
+        @include telefono {
+            height: 50rem !important;
+        }
+        @include tablet {
+            height: 40rem !important;
+        }
+        .ordenar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        @include tablet {
+            .ordenar {
+                display: inline-block;
+            }
+        }
+
+}
+#div_file{
+    position: relative;
+    padding: 0.5rem;
+    width: 12rem;
+    background-color: rgba(155, 154, 154, 0.521);
+    border: 1px solid $gris;
+    border-radius: 1rem;
+    &:hover{
+        cursor: pointer;
+        background-color: rgba(155, 154, 154, 0.911);
+    }
+    #imagen {
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+    #texto {
+        text-align: center;
+        color: $blanco;
+        margin: 0;
+        font-weight: 400;
+        font-size: 1.5rem !important;
+    }
+}

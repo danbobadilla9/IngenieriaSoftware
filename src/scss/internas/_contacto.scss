@@ -1,0 +1,116 @@
+.sugerencias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        margin: 0;
+        font-weight: 700;
+        color: $azulClaro;
+    }
+    margin: 2rem 0;
+}
+.alinear {
+    @include tablet{
+        display: flex;
+        height: 40rem;
+    }
+
+}
+.preguntas {
+    @include tablet {
+        
+        &:nth-child(even){
+            left: 70rem;
+        }
+        position: absolute;
+        width: 50rem;
+        margin-right: 15rem;
+        margin-bottom: 5rem;
+        &:last-child {
+            margin-right: 0;
+        }
+        @include grid(1,2rem);
+    }
+    
+    align-items: center;
+    .pregunta {
+        &:hover{
+            cursor: pointer;
+        }
+        margin: 2rem 0;
+        background-color: $blanco;
+        border: 1px solid $gris;
+        padding: 2rem;
+        text-align: center;
+    }
+    .pregunta__informacion{
+        border-top: 1px solid $gris;
+        display: none;
+    }
+
+    .mostrar {
+        display: block ;
+    }
+    .pregunta__titulo {
+        color: $azulClaro;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.formulario {
+    legend {
+        font-size: 2rem;
+        color: $grisOscuro;
+    }
+    label {
+        font-weight: 700;
+        text-transform: uppercase;
+        display: block;
+    }
+    input:not([type="submit"]),
+    textarea {
+        padding: .5rem;
+        display: block;
+        width: 100%;
+        background-color: $blanco;
+        border: 1px solid $gris;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+    }
+    textarea{
+        height: 20rem;
+    }
+    .boton-contacto{
+        background-color: $azulClaro;
+        color: $blanco;
+        text-align: center;
+        padding: 1rem 3rem;
+        margin-top: 2rem;
+        border: none;
+        &:hover{
+            background-color: $azulFuerte;
+            cursor: pointer;
+        }
+    }
+    .error {
+        margin: 0 auto;
+        background-color: rgb(185,0,0);
+        text-align: center;
+        padding: 1rem;
+        color: $blanco;
+        text-transform: uppercase;
+        max-width: 50rem;
+    }
+    .correcto {
+        margin: 0 auto;
+        background-color: rgb(89, 250, 169);
+        text-align: center;
+        padding: 1rem;
+        color: $blanco;
+        text-transform: uppercase;
+        max-width: 50rem;
+    }
+}

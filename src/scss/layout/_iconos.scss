@@ -1,0 +1,59 @@
+.main--titulo{
+    font-weight: 700;
+    color: $azulClaro;
+    text-align: center;
+}
+.main--info{
+    text-align: center;
+    font-weight: 400;
+}
+.iconos--index {
+    @include telefono {
+        @include grid(2,2rem);
+    }
+    @include tablet {
+        @include grid(4,2rem);
+    }
+
+
+}
+.servicios__info {
+    text-align: center;
+    .icon{
+        height: 10rem;
+    }
+    h3 {
+        color: $azulFuerte;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    p {
+        font-weight: 400;
+    }
+}
+
+.beneficios {
+    
+    @include tablet {
+        @include grid(2,2rem);
+        grid-auto-flow: column;
+        img {
+            grid-column: 1 / 2;
+        }
+    }
+    img {
+        margin-top: 2rem;
+    }
+    justify-content: center;
+    align-items: center;
+    h3 {
+        color: $azulClaro;
+        font-weight: 400;
+        margin: 0;
+    }
+    p {
+        margin: 0;
+        text-align: justify;
+    }
+    margin-bottom: 5rem;
+}
