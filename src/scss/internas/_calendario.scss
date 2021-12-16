@@ -1,0 +1,124 @@
+.fondo--calendario{
+    background-image: url(../img/fondoCalendario.jpg);
+    padding: 0;
+    margin: 0;
+}
+.fc-unthemed td.fc-today {
+    background-color: rgba(155, 154, 154, 0.521);;
+}
+.fc-center {
+    color: $blanco;
+    text-transform: uppercase;
+    font-weight: 700 !important;
+}
+.fc-day-header {
+    color: $blanco;
+}
+.fc-day-top {
+    color: $blanco;
+}
+.fc-axis {
+    color: $blanco;
+}
+
+//SIDE MENU
+.menu-collapsed {
+    background-color: rgb(52,52,52);
+    width: 5rem;
+    height: 100%;
+    position: fixed;
+    //IMAGENS
+    .img-P {
+        width: 5rem;
+    }
+    .pr{
+        border-radius: 40%;
+
+    }
+//HEADER
+    .header-m{
+        padding: 1rem;
+        border-bottom: solid 1px rgb(23, 23, 23) ;
+        span {
+            color: $blanco;
+            display: none;
+        }
+        .btn-hamburger {
+            background-color: #fff;
+            width: 80%;
+            height: 2px;
+            margin: 0.5rem 0;
+        }
+        &:hover {
+            background-color: rgb(23, 23, 23);
+            cursor: pointer;
+        }
+    }
+    .profile-m{
+        padding-top: 0.8rem;
+        padding-bottom: 1rem;
+        margin: 1rem 0; 
+        border-bottom: solid 1px rgb(23, 23, 23) ;
+        span {
+            color: $blanco;
+            text-transform: capitalize;
+            display: none;
+        }
+    }
+    .bt{
+        margin-left: -1.5rem;
+    }
+}
+
+.menu-extends{
+    background-color: rgb(52,52,52);
+    width: 15rem;
+    height: 100%;
+    position: fixed;
+    //IMAGENS
+    .img-P {
+        width: 10rem;
+    }
+    .pr{
+        border-radius: 20%;
+
+    }
+//HEADER
+    .header-m{
+        padding: 1rem;
+        border-bottom: solid 1px rgb(23, 23, 23) ;
+        span {
+            text-align: center;
+            color: $blanco;
+            display: block;
+        }
+        .btn-hamburger {
+            background-color: #fff;
+            width: 80%;
+            height: 2px;
+            margin: 0.5rem auto;
+        }
+        &:hover {
+            background-color: rgb(23, 23, 23);
+            cursor: pointer;
+        }
+    }
+    .profile-m{
+        padding-top: 0.8rem;
+        padding-bottom: 1rem;
+        margin: 1rem 0; 
+        border-bottom: solid 1px rgb(23, 23, 23) ;
+        span {
+            text-align: center;
+            color: $blanco;
+            text-transform: capitalize;
+            display: block;
+        }
+        img{
+            margin: 0 auto;
+        }
+    }
+    .bt{
+        width: 10rem ;
+    }
+}

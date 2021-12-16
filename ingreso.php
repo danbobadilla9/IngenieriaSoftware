@@ -64,23 +64,6 @@
       </form>
     </div>
   </main>
-  <!-- <div class="container">
-      <div class="row">
-        <form>
-          <div class="col-lg-12 col-md-12">
-            <label for="" class="form-label">Usuario</label> <br/>
-            <input id="username" class="form-control" type="text" name="usuario" value="">
-          </div>
-          <div class="col-lg-12 col-md-12">
-            <label class="form-label" for="">Contraseña</label> <br/>
-            <input id="password" class="form-control" type="password" name="password" value="">
-          </div>
-          <div class="col-lg-12 col-md-12">
-            <button type="button" onclick="sendata()" class="btn btn-success">Login</button>
-          </div>
-        </form>
-      </div>
-    </div> -->
 
   <script type="text/javascript">
     function setAjaxNative(urlx_ajax, methodx, params, callBck) {
@@ -117,8 +100,18 @@
     //REGISTRAR USUARIO
     function sendata3() {
       var urlx = 'http://' + window.location.hostname + '/';
+      var nombre = document.getElementById('nombre').value;
+      var apellido = document.getElementById('apellido').value;
+      var user = document.getElementById('user').value;
+      var pas = document.getElementById('pas').value;
+      var cor = document.getElementById('cor').value;
       var imagen = $('#imagen').prop('files')[0];
       let formData = new FormData;
+      formData.append("nombre", nombre);
+      formData.append("apellido", apellido);
+      formData.append("user", user);
+      formData.append("pas", pas);
+      formData.append("cor", cor);
       formData.append("imagen", imagen);
       var response = setAjaxNative(urlx + "agenda/insertar.php", 'POST', formData, responsedatax);
     }

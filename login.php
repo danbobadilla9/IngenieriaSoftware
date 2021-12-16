@@ -11,10 +11,12 @@ class login extends DataBase{
   public function logueo (){
     $username = $_POST['usuario'] ? $_POST['usuario']:null;
     $password = $_POST['password'] ? $_POST['password']:null;
-    $check= $this->link->getOnlyRow("Select IdUsuario,usuario,password from usuario where usuario='".$username."' and password='".$password."'");
+    $check= $this->link->getOnlyRow("Select IdUsuario,usuario,password,Nombre,Apellido,Imagen from usuario where usuario='".$username."' and password='".$password."'");
     if($check!=false){
       // initialize session variables
       $_SESSION['iduser'] = $check['IdUsuario'];
+      $_SESSION['nombre'] = $check['Nombre']." ".$check['Apellido'];
+      $_SESSION['imagen'] = $check['Imagen'];
       $resp="ok";
     }else{
       session_destroy();

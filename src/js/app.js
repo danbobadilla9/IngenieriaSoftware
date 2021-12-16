@@ -10,15 +10,27 @@ function eventListeners(){
     // pregunta.addEventListener('click',desplegar);
     //RECUPERAR
     const recuperar = document.querySelector('.recuperar');
-    recuperar.addEventListener('click',recuperarP);
+    if(recuperar){
+        recuperar.addEventListener('click',recuperarP);
+    }
     //CANCELAR
     const cancelar = document.querySelector('.cancelar');
-    cancelar.addEventListener('click',cancela);
+    if(cancelar){
+        cancelar.addEventListener('click',cancela);
+    }
     const cancelar2 = document.querySelector('.cancelar2');
-    cancelar2.addEventListener('click',cancela2);
+    if(cancelar2){
+        cancelar2.addEventListener('click',cancela2);
+    }
     //REGISTRAR
     const registrar = document.querySelector('.registrarse');
-    registrar.addEventListener('click',registra);
+    if(registrar){
+        registrar.addEventListener('click',registra);
+    }
+    const menu = document.querySelector('.header-m');
+    if(menu){
+        menu.addEventListener('click',expandirMenu);
+    }
 
 }
 
@@ -67,4 +79,15 @@ function cancela2(){
     div3.classList.add('aumentar');
     const titulo = document.querySelector('.form--titulo');
     titulo.innerHTML = 'INICIAR SESIÓN';
+}
+function expandirMenu(){
+    console.log('click');
+    const menu = document.querySelector('.interactua');
+    if(menu.classList.contains('menu-collapsed')){
+        menu.classList.remove('menu-collapsed');
+        menu.classList.add('menu-extends');
+    }else{
+        menu.classList.remove('menu-extends');
+        menu.classList.add('menu-collapsed');
+    }
 }

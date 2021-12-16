@@ -20,7 +20,7 @@
                 if($bandera){
                     $message['status']=200;
                     $message['mensaje']= "Evento registrado";
-                }else{
+                }else{ 
                     $message['status']=201;
                 }
             }
