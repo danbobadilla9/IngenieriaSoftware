@@ -1,9 +1,10 @@
 <?php
 session_start();
+
 require_once "db.php";
 class login extends DataBase{
   private $link = null;
-
+  
   public function __construct(){
     $this->link = DataBase::getInstance();
   }

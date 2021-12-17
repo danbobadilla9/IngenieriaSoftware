@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded',function(){
+document.addEventListener('DOMContentLoaded',function(){    
     eventListeners();
 });
 
@@ -31,7 +31,16 @@ function eventListeners(){
     if(menu){
         menu.addEventListener('click',expandirMenu);
     }
-
+    //Validar correo
+    const correo = document.querySelector('#cor');
+    if(correo){
+        correo.addEventListener('blur',validarCorreo);
+    }
+    //Validar Correo Recuperar
+    const recup = document.querySelector('#recup');
+    if(recup){
+        recup.addEventListener('blur',validarCorreo);
+    }
 }
 
 function desplegar(e){
@@ -89,5 +98,16 @@ function expandirMenu(){
     }else{
         menu.classList.remove('menu-extends');
         menu.classList.add('menu-collapsed');
+    }
+}
+function validarCorreo(e){
+    const expresiones = {
+        usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+        correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+    }
+    if(expresiones.correo.test(e.target.value)){        
+        e.target.classList.remove('correoM');
+    }else{
+        e.target.classList.add('correoM');
     }
 }

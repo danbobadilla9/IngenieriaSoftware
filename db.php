@@ -2,6 +2,7 @@
 
 class DataBase{
 
+
   private $host = 'localhost';
   private $user = 'root';
   private $password = 'root';
